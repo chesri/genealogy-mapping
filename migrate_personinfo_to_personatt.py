@@ -1,3 +1,4 @@
+# Cmac, 2/14/2024
 import arcpy
         
 arcpy.env.workspace = R"C:\Users\chrism\OneDrive\Geneaology\Studies and Projects\19_Data Modeling Attempts\Gen_DataModel_DEV\Gen_DataModel_DEV.gdb"
@@ -10,7 +11,6 @@ person_att_fields = ['legacy_id','attribute_name','attribute_value']
 
 persons = [row for row in arcpy.da.SearchCursor(person_table,person_fields) if row[0]]
 person_att_list = []
-
 
 for person in persons:
     print(f"Processing {person}")
